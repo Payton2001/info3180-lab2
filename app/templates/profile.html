@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+</head>
+<body>
+    {% block main %}
+    <div class="container">
+        <div class="info_container">
+            <img src="{{url_for('static', filename='/mypic.jpg')}}" alt="Picture of Shadean Paytom">
+            <h1>Shadean Payton</h1>
+            <p>@spayton</p>
+            <p>St. Catherine, Jamaica</p>
+            <p>{{join}}</p>
+        </div>
+        <div class="white_container">
+            <div class='personal_container'>
+                <p class="summary">
+                    I am smart and talented young woman who loves
+                    website design and development. Contact me if you 
+                    would like to work together on a new project.
+                </p>
+            </div>
+            <div class="data_conatainer">
+                <div class="container_element">
+                    <p class="post" id="post">7</p>
+                    <span>Posts</span>
+                </div>
+                <div class="container_element">
+                    <p class="following" id="following">100</p>
+                    <span>Following</span>
+                </div>
+                <div class="container_element">
+                    <p class="follower" id="follower">250</p>
+                    <span>Followers</span>
+                </div>
+            </div>
+            <div class="btn_container">
+                <button type="submit" name="btn" class="btn" id="btn">Follow</button>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block js %} 
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+    
+    {% endblock %}
+
+</body>
+</html>
